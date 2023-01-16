@@ -1,0 +1,281 @@
+*{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #E5E5E5;
+    width: auto;
+}
+
+header img{
+    margin: 30px 0 0 30px;
+}
+main{
+    margin: 0 100px 50px;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+}
+.texto{
+    
+    width: 577px;
+    height: 48px;
+    left: 200px;
+    top: 100px;
+    
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background: #E5E5E5;
+    border:none;
+    text-transform: lowercase;
+}
+.texto:focus{
+    outline: none;
+}
+.texto::placeholder{
+    color: #0A3871;
+    
+}
+.panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 800px;
+}
+
+.panel h6{
+    margin: 20px;
+}
+.panel i{
+    color: #495057;
+}
+.encriptar{
+    background: #0A3871;
+    color: white;
+    padding: 24px;
+    border-radius: 24px;
+    width: 328px;
+    height: 67px;
+    border: none;
+    transition: 500ms;    
+    
+}
+.encriptar:hover{
+    cursor: pointer;
+    background-color: #052051;
+    box-shadow: 0px 0px 20px #052051;
+}
+.desencriptar{
+    color: #0A3871;
+    background: #AAB2D5;
+    border: solid 1px #0A3871;
+    padding: 24px;
+    border-radius: 24px;
+    width: 328px;
+    height: 67px;
+    transition: 500ms;    
+    
+}
+.desencriptar:hover{
+    cursor: pointer;
+    background-color: #757FB2;
+    color: white;
+    box-shadow: 0px 0px 20px #757FB2;
+}
+.no-resultado{
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+    width: 400px;
+    height: 844px;
+    left: 400px;
+    
+    background: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.no-resultado img{
+    width: 336px;
+    height: 304px;
+    top: 283px;
+    margin-bottom: 10px;
+    
+}
+.no-resultado h2{
+    width: 336px;
+    height: 58px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    margin:20px 0
+    
+}
+.no-resultado p{
+    width: 336px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    margin-top: 10px;
+
+}
+#resultado{
+    display: none;
+}
+.resultado{
+    
+    
+    padding: 10px 20px 0;
+    position: relative;
+    width: 400px;
+    height: 844px;
+    
+    
+    background: #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.resultado p{
+    width: 336px;
+    height: 781px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+}
+.resultado textarea{
+    padding: 20px;
+    height: 600px;
+    width: 350px;
+    border-radius: 32px;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color:#D8DFE8;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+}
+.resultado button{
+    color: #609ED4;
+    font-size: 30px;
+    position: relative;
+    bottom: 70px;
+    left: 35px;
+    border: none;
+    background: transparent;
+}
+.resultado button:hover{
+    color: #0A3871;
+    cursor: pointer;
+}
+.resultado button:focus{
+    color: #0A3871;
+
+}
+footer{
+    width: 100%;
+    background-color:#868E96 ;
+    height: 200px;
+}
+footer div{
+    height: 200px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-around;
+    
+    
+}
+footer a{
+    margin: 10px;
+    color: #0A3871;
+    font-size: 40px;
+}
+footer p{
+    font-weight: bold;
+    font-size: 30px;
+    color: #0A3871;
+    
+}
+@media(max-width:768px){
+    main{
+        flex-wrap: wrap;
+    }
+    .panel{
+        width: auto;
+        height: 600px;
+        margin-left: 30px;
+        justify-content: space-around;
+    }
+    .panel div{
+        width: 100%;
+    }
+    .panel button{
+        width: 45%;
+    }
+    .texto{
+        font-size: 32px;
+    }
+    .no-resultado{
+        height: 200px;
+        width: 600px;
+    }
+    .no-resultado img{
+        display: none;
+        
+    }
+    div.resultado{
+        height:200px;
+        width: 600px;
+    }
+    .resultado textarea{
+        height: 150px;
+        width: 500px;
+        position: relative;
+        bottom: -10px;
+
+    }
+    .resultado i{
+        position: relative;
+        right: 20px;
+        top:20px
+    }
+    footer p{
+        font-size: 20px;
+    }
+}
+@media(max-width:425px){
+    .texto{
+        width: auto;
+    }
+    body{
+        width: auto;
+    }
+    .no-resultado{
+        width: auto;
+    }
+    div.resultado{
+        height: 200px;
+        width: 360px;
+    }
+    .resultado textarea{
+        height: 150px;
+        width: 300px;
+    }
+    .panel{
+        width: 310px;
+        margin-left: 0px;
+    }
+    .panel button{
+        width: 95%;
+    }
+}
