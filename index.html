@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b7eff94083.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img src="../img/Logo.png" alt="">
+    </header>
+    <main>
+        <div class="panel">
+            <input id="texto-no-modificado" class="texto" type="text" placeholder="Ingrese el texto aquí">
+            <div>
+                <h6><i class="fa-sharp fa-solid fa-circle-exclamation"></i> Solo modifica letras minúsculas y sin acento.</h6>         
+                <button class="encriptar" type="button" onclick="encriptar();mostrarResultado()">encriptar</button>
+                <button class="desencriptar" type="button" onclick="desencriptar();mostrarResultado()">desencriptar</button>
+            </div>
+        </div>
+        <div class="pizarra">
+            <div class="no-resultado" id="no-resultado">
+                <img src="../img/Muñeco.png" alt="">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desea encriptar o desencriptar</p>
+            </div>
+            <div id="resultado">
+                <div class="resultado">
+                    <textarea name="" id="texto-modificado" cols="30" rows="10" readonly></textarea><button id="copiar" onclick="copiar()"><i class="fa-regular fa-copy"></i></button>              
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Creado por Gianfranco Sacchi</p>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/gianfranco-sacchi-16253221a/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/sacchi_gianfranco/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/chisator"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let noModificado=document.getElementById('texto-no-modificado');
+        let modificado= document.getElementById('texto-modificado');
+
+        let resultado = document.getElementById('resultado');
+        let noResultado = document.getElementById('no-resultado');
+        function copiar(){
+            navigator.clipboard.writeText(modificado.innerHTML)
+        }
+
+        function mostrarResultado(){
+            resultado.style.display = 'block';
+            noResultado.style.display = 'none';
+        }
+        function encriptar(){
+            modificado.innerHTML=(((((noModificado.value).replace(/e/g,"enter")).replace(/i/g,"imes")).replace(/a/g,"ai")).replace(/o/g,"ober")).replace(/u/g,"ufat");
+        }
+        function desencriptar(){
+            modificado.innerHTML=(((((noModificado.value).replace(/enter/g,'e')).replace(/imes/g,'i')).replace(/ai/g,'a')).replace(/ober/g,'o')).replace(/ufat/g,'u');
+        }
+    </script>
+</body>
+</html>
